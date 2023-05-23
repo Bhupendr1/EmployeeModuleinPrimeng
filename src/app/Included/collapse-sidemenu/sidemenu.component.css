@@ -1,0 +1,25 @@
+mat-sidenav-container {
+  height: 75vh;
+}
+
+    mat-sidenav mat-nav-list .menu-item {
+        margin-left: 8px;
+    }
+  
+
+      .chevron-button {
+        transition: 300ms ease-in-out;
+        transform: rotate(0deg);
+      }
+
+      .chevron-button.rotated {
+        transform: rotate(180deg);
+      }
+      .article {
+        height: 100vh;
+         display: flex;
+        flex-direction: column;
+    }
+    footer {
+    margin-top: auto;
+    }

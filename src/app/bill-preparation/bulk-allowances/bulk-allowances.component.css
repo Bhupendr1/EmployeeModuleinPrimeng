@@ -1,0 +1,23 @@
+::ng-deep .p-fieldset-legend .ng-tns-c106-1{
+    margin-left: 50%;
+}
+
+.p-datatable-flex-scrollable {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.p-component, .p-component * {
+    box-sizing: border-box;
+}
+
+.layout-wrapper .layout-content .content-section {
+    padding: 2rem 4rem;
+    flex-grow: 1;
+}
+@media screen and (max-width: 536px){
+.layout-wrapper .layout-content .content-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+}

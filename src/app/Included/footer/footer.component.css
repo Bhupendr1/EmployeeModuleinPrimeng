@@ -1,0 +1,9 @@
+i{
+    scale: 1.2;
+}
+i:hover{
+    color:#0582f7;;
+    transition: 0.3s;
+    transform: rotateY(180deg);
+    scale: 1.7;
+}

@@ -1,0 +1,20 @@
+<div class="light_grey_bg sm:hidden" id="mySidenav1">
+         <nav class="sidebar sidebar-offcanvas pe-3 " id="sidebar">
+          <div class="px-3">
+            <div class="input-group">
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search by name">
+              </mat-form-field>                
+              </div>   
+              </div>
+              <p-panelMenu [model]="items" autoWidth="false"
+              [style]="{'width': '100%'}"></p-panelMenu>
+            <a  class="closebtn" (click)="closeMenu()">&times;</a>
+          </nav>
+</div>
+<script>
+   function openMenu() {
+    document.getElementById("mySidenav1").style.display = "none";
+  }
+</script>

@@ -1,0 +1,9 @@
+::ng-deep .mdc-button .mdc-button__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: medium;
+}
+.maticonsize{
+  scale: 0.7;
+}

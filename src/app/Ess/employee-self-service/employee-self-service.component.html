@@ -1,0 +1,211 @@
+<div class="content-wrapper">
+    <div class="content">
+        <div class="text-center font-bold  text-4xl sm:ml-1 mb-1 sm:mt-0 mt-1"><p-breadcrumb [model]="abc"></p-breadcrumb></div>
+        <div class="feature-boxes grid-nogutter grid bg-white">
+            <div class="col-12 ">
+                <form class=" ">
+                    <p-fieldset legend="Employee Self Service">
+                        
+                        <div class="grid grid-nogutter">
+                          
+                            <div class="col-12 ">
+                                <div class="formgrid grid flex  flex-wra">
+                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                        <span class="p-float-label">
+                                            <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                            <label for="float-input">Name</label>
+                                         </span>
+                                    </div>
+                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                        <span class="p-float-label">
+                                            <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                            <label for="float-input">Father's Name</label>
+                                         </span>
+                                    </div>
+                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                        <span class="p-float-label">
+                                            <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                            <label for="float-input">Mother's Name</label>
+                                         </span>
+                                    </div>
+                                                                                  
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <p-dropdown [showClear]="true" [filter]="true" filterBy="name"
+                                                    [showClear]="true" autoWidth="false" [style]="{'width': '100%'}"
+                                                    class="p-inputtext-md">
+                                                </p-dropdown>
+                                                <label for="float-input"> Gender</label>
+                                            </span>
+                                        </div>
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+
+                                            <span class="p-float-label">
+                                                <p-calendar [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true" inputId="min-max"
+                                                autoWidth="false" [showIcon]="true" inputId="icon" [style]="{'width': '100%'}">
+                                                </p-calendar>
+                                                <label for="float-input">Date of Birth</label>
+                                            </span>
+    
+                                            </div>
+
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <p-dropdown [showClear]="true" [filter]="true" filterBy="name"
+                                                    [showClear]="true" autoWidth="false" [style]="{'width': '100%'}"
+                                                    class="p-inputtext-md">
+                                                </p-dropdown>
+                                                <label for="float-input">Social Category</label>
+                                            </span>
+                                        </div>
+
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                <label for="float-input">Mobile Number</label>
+                                             </span>
+                                        </div>
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <p-dropdown [showClear]="true" [filter]="true" filterBy="name"
+                                                    [showClear]="true" autoWidth="false" [style]="{'width': '100%'}"
+                                                    class="p-inputtext-md">
+                                                </p-dropdown>
+                                                <label for="float-input">Marital Status</label>
+                                            </span>
+                                        </div>
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                <label for="float-input">Spouse Name</label>
+                                             </span>
+                                        </div>
+                            
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3 flex align-item-center sm:pt-2 sm:justify-content-center">
+                                                <div class="p-field sm:mt-1 ml-1">Disable</div>
+                                                <div class="p-field-radiobutton sm:mt-1 mx-5">
+                                                     <p-radioButton name="city" value="Y"  label="No"
+                                                         [(ngModel)]="city"></p-radioButton>
+                                                 </div>
+                                                 <div class="p-field-radiobutton sm:mt-1 mx-5 ">
+                                                     <p-radioButton name="city" value="N"  label="Yes"
+                                                         [(ngModel)]="city"></p-radioButton>
+                                                 </div>
+                                            
+                                         </div>
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <p-dropdown [showClear]="true" [filter]="true" filterBy="name"
+                                                        [showClear]="true" autoWidth="false" [style]="{'width': '100%'}"
+                                                        class="p-inputtext-md">
+                                                    </p-dropdown>
+                                                    <label for="float-input">Type of Disability</label>
+                                                </span>
+                                            </div>
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                    <label for="float-input">Persentage Of Disability</label>
+                                                 </span>
+                                            </div>
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                    <label for="float-input">Height</label>
+                                                 </span>
+                                            </div>
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <p-dropdown [showClear]="true" [filter]="true" filterBy="name"
+                                                        [showClear]="true" autoWidth="false" [style]="{'width': '100%'}"
+                                                        class="p-inputtext-md">
+                                                    </p-dropdown>
+                                                    <label for="float-input">Blood Group</label>
+                                                </span>
+                                            </div>
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                    <label for="float-input">Identification Mark</label>
+                                                 </span>
+                                            </div>
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                    <label for="float-input">PAN No</label>
+                                                 </span>
+                                            </div>
+
+                                            <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                <span class="p-float-label">
+                                                    <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                                                    <label for="float-input">Email ID</label>
+                                                 </span>
+                                            </div>
+
+                                    <div class="field col-12">
+                                        <div class="flex flex-wrap justify-content-center gap-3 ">
+                                            <button  type="button" class="btn btn-secondary ms-2" mat-raised-button  routerLink="/Home/Ess/Ess-Req"><mat-icon>arrow_back_ios_new</mat-icon>Back</button>
+
+                                            <button type="button" mat-raised-button class="mx-2">
+                                                <mat-icon matSuffix><span class="material-symbols-outlined">
+                                                    save
+                                                  </span></mat-icon>Save
+                                              </button>
+                                            <button type="button" mat-raised-button  color="warn"><mat-icon matSuffix>refresh</mat-icon>Reset</button>
+                                        </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </p-fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<article class="surface-border shadow-1 border-round mt-2 surface-section ml-1 ">
+    <section class="flex flex-column md:flex-row">
+        <div class="col-12">
+            <div class="card shadow-1 surface-border border-round">
+                <p-table [value]="products" dataKey="id" 
+                  styleClass="p-datatable-gridlines">
+                    <ng-template pTemplate="header" let-columns >
+                        <tr>
+                            <th>S.No</th>
+                            <th>Req ID</th>
+                            <th>Name</th>
+                            <th>Father's Name</th>
+                            <th>Mother's Name</th>
+                            <th>Gender</th>
+                            <th>Date Of Birth</th>
+                            <th>Social Category</th>
+                            <th>Mobile Number</th>
+                            <th>Marital Status</th>
+                            <th>Spouse Name</th>
+                            <th>Disable</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product let-i="rowIndex">
+                        <tr>
+                            <td>{{i+1}}</td>
+                            <td>{{product.ReqID}}</td>
+                            <td>{{product.Name}}</td>
+                            <td>{{product.FatherName}}</td>
+                            <td>{{product.MotherName}}</td>
+                            <td>{{product.Gender}}</td>
+                            <td>{{product.Dob}}</td>
+                            <td>{{product.SocialCategory}}</td>
+                            <td>{{product.MobileNo}}</td>
+                            <td>{{product.MaritalStatus}}</td>
+                            <td>{{product.SpouseName}}</td>
+                            <td>{{product.Disable}}</td>
+
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </section>
+</article>

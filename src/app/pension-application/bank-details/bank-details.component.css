@@ -1,0 +1,32 @@
+tr.mat-header-row th, .mat-header-cell
+{
+    background: #F5F5FF !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #231E60;
+    font-weight: 600;
+}
+
+
+.mat-form-field-wrapper {
+padding-bottom: 0px; 
+}
+.box{
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.btnbg{
+color: #3f51b5;
+    background-color: #e3e5eb;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+ div span {
+    display: block;
+    padding-bottom: 10px;
+    font-weight: 600;           
+  }

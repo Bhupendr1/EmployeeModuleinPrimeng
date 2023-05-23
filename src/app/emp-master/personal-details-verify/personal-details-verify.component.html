@@ -1,0 +1,433 @@
+
+
+<div class="content-wrapper">
+    <div class="content">
+        <!-- <div class="text-center font-bold  text-4xl sm:ml-1 mb-1 sm:mt-0 mt-1"><app-breadcum></app-breadcum></div> -->
+        <div class="feature-boxes grid-nogutter grid">
+            <div class="col-12">
+                <p-fieldset legend="Personal Details Verify">
+                    <form [formGroup]="PersonalDetails" (ngSubmit)="onSubmit()">
+                        <div class="formgrid grid">
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <input type="text" pInputText placeholder="Name" autoWidth="false"
+                                        [style]="{'width': '100%'}" formControlName="name"
+                                        [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['name'].errors}">
+                                    <label for="float-input">Name</label>
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['name'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['name'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <input type="text" pInputText placeholder="FatherName" autoWidth="false"
+                                        [style]="{'width': '100%'}" formControlName="fatherName"
+                                        [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['fatherName'].errors}">
+                                    <label for="float-input">Father Name</label>
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['fatherName'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['fatherName'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Father Name
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <input type="text" pInputText placeholder="Mother Name" autoWidth="false"
+                                        [style]="{'width': '100%'}" formControlName="motherName"
+                                        [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['motherName'].errors}">
+                                    <label for="float-input">Mother Name</label>
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['motherName'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['motherName'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Mother Name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <input type="text" pInputText placeholder="Spouse Name" autoWidth="false"
+                                        [style]="{'width': '100%'}" formControlName="spouse"
+                                        [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['spouse'].errors}">
+                                    <label for="float-input">Spouse Name</label>
+
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['spouse'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['spouse'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Spouse Name
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="formgrid grid mt-2">
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <p-calendar [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true"
+                                        inputId="min-max" autoWidth="false" [showIcon]="true" inputId="icon"
+                                        [style]="{'width': '100%'}" formControlName="dob"
+                                        [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['dob'].errors}">
+                                    </p-calendar>
+                                    <label for="float-input">Date Of Birth</label>
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['dob'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['dob'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Date Of Birth
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <p-dropdown [options]="GetGenderdata" optionLabel="GEN_NAME_EN"
+                                        [filter]="true" filterBy="GEN_NAME_EN" [showClear]="true" [showClear]="true"
+                                        placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}"
+                                        formControlName="SelectMonth"
+                                        [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['SelectMonth'].errors}">
+                                    </p-dropdown>
+                                    <label for="float-input">Select Gender</label>
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['SelectMonth'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['SelectMonth'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Select Gender
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <input type="text" pInputText placeholder="Height" autoWidth="false"
+                                        [style]="{'width': '100%'}" formControlName="Height"  [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['Height'].errors}">
+                                    <label for="float-input">Height</label>
+                                </span>
+
+                                <div *ngIf="submitted && PersonalDetails.controls['Height'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['Height'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Height
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+    
+                              <div class="field col-12  md:col-6 lg:col-3">
+                                <span class="p-float-label">
+                                    <input type="text" pInputText placeholder="Identification Marks" autoWidth="false"
+                                        [style]="{'width': '100%'}" formControlName="Identification"  [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['Identification'].errors}">
+                                    <label for="float-input">Identification Marks</label>
+                                </span>
+                                <div *ngIf="submitted && PersonalDetails.controls['Identification'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['Identification'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Identification Marks
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="formgrid grid mt-2">
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="MaritalStatus" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['MaritalStatus'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Marital Status</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['MaritalStatus'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['MaritalStatus'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Marital Status
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                    class="field col-12  md:col-6 lg:col-3  flex justify-content-evenly flex-wrap p-3 font-semibold">
+                    <div class="p-field-radiobutton">
+                      <p-radioButton name="city" value="New York" [(ngModel)]="city" inputId="city3" label="Option 2"
+                        label="No"></p-radioButton>
+                    </div>
+                    <div class="p-field-radiobutton">
+                      <p-radioButton name="city" value="San Francisco" [(ngModel)]="city" inputId="city4"
+                        label="Yes"></p-radioButton>
+                    </div>
+                  </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="TypeDisability" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['TypeDisability'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Type of Disability</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['TypeDisability'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['TypeDisability'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Type of Disability
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <input type="text" pInputText placeholder="Percentage of Disability" autoWidth="false"
+                                    [style]="{'width': '100%'}" formControlName="PercentageDisability" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['PercentageDisability'].errors}">
+                                <label for="float-input">Percentage of Disability</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['PercentageDisability'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['PercentageDisability'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Percentage of Disability
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- zdfhfgjhkn;lg -->
+                     <div class="formgrid grid mt-2">
+                        
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="BloodGroup" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['BloodGroup'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Blood Group</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['BloodGroup'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['BloodGroup'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Blood Group
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <input type="text" pInputText placeholder="Email ID" autoWidth="false"
+                                    [style]="{'width': '100%'}" formControlName="emailIID" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['emailIID'].errors}">
+                                <label for="float-input">Email ID</label>
+                                <div *ngIf="submitted && PersonalDetails.controls['emailIID'].errors">
+                                    <div *ngIf="submitted && PersonalDetails.controls['emailIID'].errors['required']"
+                                        class="text-danger">
+                                        Please Enter Email ID
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <input type="text" pInputText placeholder="Mobile Number" autoWidth="false" formControlName="MobileNumber"
+                                    [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['MobileNumber'].errors}">
+                                <label for="float-input">Mobile Number</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['MobileNumber'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['MobileNumber'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Mobile Number
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="SocialCategory" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['SocialCategory'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Social Category</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['SocialCategory'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['SocialCategory'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Social Category
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                  
+                    <div class="formgrid grid mt-2">
+                       
+                        <!-- <div class="p-field-radiobutton">
+                            <p-radioButton name="city" value="New York" (ngModel)="city" inputId="city3"
+                                label="Option 2" label="No"></p-radioButton>
+                        </div>
+                        <div class="p-field-radiobutton">
+                            <p-radioButton name="city" value="San Francisco" (ngModel)="city" inputId="city4"
+                                label="Yes"></p-radioButton>
+                        </div> -->
+                                                
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span>Belongs to Minority</span>
+                        </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" formControlName="EmployeeCategory" [style]="{'width': '100%'}" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['EmployeeCategory'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Employee Category </label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['EmployeeCategory'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['EmployeeCategory'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Employee Category
+                                </div>
+                            </div>
+                        </div>
+                         <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="ServiceCategory" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['ServiceCategory'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Service Category </label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['ServiceCategory'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['ServiceCategory'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Service Category
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="SubServiceCategory" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['SubServiceCategory'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Sub Service Category/cadre</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['SubServiceCategory'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['SubServiceCategory'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Sub Service Category/cadre
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="formgrid grid mt-2">
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="ParentDepartment" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['ParentDepartment'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Parent Department</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['ParentDepartment'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['ParentDepartment'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Parent Department
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="CurrentDepartment" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['CurrentDepartment'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Current Department</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['CurrentDepartment'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['CurrentDepartment'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Current Department
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="appointed" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['appointed'].errors}">
+                                </p-dropdown>
+                                <label for="float-input">Appointed As </label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['appointed'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['appointed'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Appointed As
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <p-dropdown [options]="countries" (ngModel)="selectedCountry" optionLabel="name"
+                                    [filter]="true" filterBy="name" [showClear]="true" [showClear]="true"
+                                    placeholder="Select a Country" autoWidth="false" [style]="{'width': '100%'}" formControlName="CurrentDesignation" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['CurrentDesignation'].errors}">
+                                </p-dropdown>
+                                <label for="float-input"> Current Designation</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['CurrentDesignation'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['CurrentDesignation'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Current Designation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formgrid grid mt-2">
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <input type="text" pInputText placeholder="Order Issuing Authority" autoWidth="false"
+                                    [style]="{'width': '100%'}" formControlName="OrderIssuing" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['OrderIssuing'].errors}">
+                                <label for="float-input">Order Issuing Authority</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['OrderIssuing'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['OrderIssuing'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Order Issuing Authority
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="field col-12  md:col-6 lg:col-3">
+                            <span class="p-float-label">
+                                <input type="text" pInputText placeholder="Appointment Authority" autoWidth="false"
+                                    [style]="{'width': '100%'}" formControlName="AppointmentAuthority" [style]="{'width': '100%'}" [ngClass]="{'is-invalid':submitted && PersonalDetails.controls['AppointmentAuthority'].errors}">
+                                <label for="float-input">Appointment Authority</label>
+                            </span>
+                            <div *ngIf="submitted && PersonalDetails.controls['AppointmentAuthority'].errors">
+                                <div *ngIf="submitted && PersonalDetails.controls['AppointmentAuthority'].errors['required']"
+                                    class="text-danger">
+                                    Please Enter Appointment Authority
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                        <div class="text-center mt-5">
+                            <button type="button" mat-icon-button> <mat-icon>keyboard_arrow_left</mat-icon></button>
+                            <button mat-raised-button class="btncolor"> <mat-icon matSuffix>save</mat-icon>Save</button>
+
+                            <button mat-raised-button type="reset" class="mx-2 white-space-nowrap" color="warn">
+                                <mat-icon matSuffix>refresh</mat-icon>Reset</button>
+                            <button type="button" mat-icon-button> <mat-icon>keyboard_arrow_right</mat-icon></button>
+                        </div>
+                    </form>
+                </p-fieldset>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+
+
+.sidebar {    
+    font-weight: 500;
+    padding: 0;
+    z-index: 11;
+    transition: width 0.25s ease, background 0.25s ease;
+    -webkit-transition: width 0.25s ease, background 0.25s ease;
+    -moz-transition: width 0.25s ease, background 0.25s ease;
+    -ms-transition: width 0.25s ease, background 0.25s ease;
+  } 
+ .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 32px;
+    margin-top: 10px ;
+    text-decoration: none;
+    color: #636363;
+  }
+  @media screen and (max-width: 991px) {
+    .sidebar-offcanvas {
+      position: fixed;
+      top: 40px;
+      bottom: 0;
+      overflow: auto;
+      left: 0px;
+      background-color: #fff;
+      -webkit-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      padding-top: 60px;
+      width: 285px;
+    }
+   }
+  
+   /* :host ::ng-deep .ui-slidemenu {
+    width: 13.5em
+} */

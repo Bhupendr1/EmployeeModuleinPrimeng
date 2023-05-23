@@ -1,0 +1,112 @@
+<div class="content-wrapper">
+    <div class="content">
+        <div class="text-center font-bold  text-4xl sm:ml-1 mb-1 sm:mt-0 mt-1">
+           <app-breadcum></app-breadcum> 
+        </div>
+        <div class="feature-boxes grid-nogutter grid">
+            <div class="col-12">
+                <form [formGroup]="ddoFrwrdForm" (ngSubmit)="onSubmit()">
+                    <p-fieldset legend="DDO Forward" [toggleable]="false">
+
+                        <div class="formgrid grid">
+                            <div class="field col-12 md:col-6 lg:col-3">
+                                <p-dropdown  [options]="months" optionLabel="name" formControlName="ddlMonth" 
+                                    [showClear]="true" [filter]="true" filterBy="name" placeholder="Select Month" autoWidth="false"
+                                    [style]="{'width': '100%'}">
+                                </p-dropdown>
+                                <p-message severity="error" text="This field is required" *ngIf="!ddoFrwrdForm.controls['ddlMonth'].valid&&ddoFrwrdForm.controls['ddlMonth'].dirty"></p-message>
+                            </div>
+                            <div class="field col-12 md:col-6 lg:col-3">
+                                <p-dropdown [options]="years"  formControlName="ddlYear"  optionLabel="name"
+                                    [showClear]="true" [filter]="true" filterBy="name" placeholder="Select Year" autoWidth="false"
+                                    [style]="{'width': '100%'}">
+                                </p-dropdown>
+                                <p-message severity="error" text="This field is required" *ngIf="!ddoFrwrdForm.controls['ddlYear'].valid&&ddoFrwrdForm.controls['ddlYear'].dirty"></p-message>
+                            </div>
+                            <div class="field col-12 md:col-6 lg:col-3">
+                                <p-dropdown [options]="billType"  formControlName="ddlBillType" name="ddlBillType" optionLabel="name" 
+                                    [showClear]="true" [filter]="true" filterBy="name" placeholder="Select Bill Type" autoWidth="false"
+                                    [style]="{'width': '100%'}">
+                                </p-dropdown>
+                                <p-message severity="error" text="This field is required" *ngIf="!ddoFrwrdForm.controls['ddlBillType'].valid&&ddoFrwrdForm.controls['ddlBillType'].dirty"></p-message>
+                            </div>
+                            <div class="field col-12 md:col-6 lg:col-3">
+                                <p-dropdown [options]="billName"  formControlName="ddlBillName" name="ddlBillName" optionLabel="name" 
+                                    [showClear]="true" [filter]="true" filterBy="name" placeholder="Select Bill Name" autoWidth="false"
+                                    [style]="{'width': '100%'}">
+                                </p-dropdown>
+                                <p-message severity="error" text="This field is required" *ngIf="!ddoFrwrdForm.controls['ddlBillName'].valid&&ddoFrwrdForm.controls['ddlBillName'].dirty"></p-message>
+                            </div>
+                            <div class="field col-12 md:col-6 lg:col-3">
+                                <p-dropdown [options]="billNo"  formControlName="ddlBillNo" name="ddlBillNo" optionLabel="name"
+                                    [showClear]="true" [filter]="true" filterBy="name" placeholder="Select Bill No." autoWidth="false"
+                                    [style]="{'width': '100%'}">
+                                </p-dropdown>
+                                <p-message severity="error"  class="text-danger" text="This field is required" *ngIf="!ddoFrwrdForm.controls['ddlBillNo'].valid&&ddoFrwrdForm.controls['ddlBillNo'].dirty"></p-message>
+                            </div>
+                            <div class="field col-12 text-center">
+                                <button type="button" mat-raised-button class="mx-2 white-space-nowrap btncolor">Validate Budget
+                                   <mat-icon>
+                                    <span class="material-symbols-outlined">verified_user</span>
+                                    </mat-icon>
+                                </button>
+                                <button type="button" mat-raised-button >Forward
+                                    <span class="maticonsize"><mat-icon>arrow_forward_ios</mat-icon></span>
+                                </button>
+                           </div>
+                        </div>
+                        <div class="formgrid grid" *ngIf="isShowTbl">
+                            <div class="field col-12">
+                                <div class="card">
+                                    <p-table [value]="products" styleClass="colored" [paginator]="false" [rows]="rows"
+                                        [showCurrentPageReport]="true" [rowsPerPageOptions]="[5,10,20]">
+                                        <ng-template pTemplate="header">
+                                            <tr>
+                                                <th></th>
+                                                <th>Bill No</th>
+                                                <th>Bill Date</th>
+                                                <th>Budget Details</th>
+                                                <th>Net Amount</th>
+                                                <th>Gross Amount</th>
+                                                <th>SF</th>
+                                                <th>CA</th>
+                                                <th>NA</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </ng-template>
+                                        <ng-template pTemplate="body" let-product>
+                                            <tr>
+                                                <td>
+                                                    <!-- <div class="p-field-checkbox"> -->
+                                                        <!-- <p-checkbox name="group1" formControlName="chckBx" [binary]="true" (onChange)="showHide()" value="San Francisco" 
+                                                          inputId="sf"></p-checkbox> -->
+                                                      <!-- </div> -->
+                                                </td>
+                                                <td>{{product.billNo}}</td>
+                                                <td>{{product.billDate}}</td>
+                                                <td>{{product.budgetDetail}}</td>
+                                                <td><a href="#">{{product.netAmount}}</a></td>
+                                                <td><a href="#">{{product.grossAmount}}</a></td>
+                                                <td> 
+                                                    <input matInput #input placeholder="SF" *ngIf="showHideTxt" [style]="{'width': '45%'}">
+                                                </td>
+                                                <td> <input matInput #input placeholder="CA" *ngIf="showHideTxt" [style]="{'width': '45%'}">
+                                                </td>
+                                                <td> <input matInput #input placeholder="NA" *ngIf="showHideTxt" [style]="{'width': '45%'}">
+                                                </td>
+                                                <!-- <td><a href="#">{{product.ca}}</a></td>
+                                                <td><a href="#">{{product.na}}</a></td> -->
+                                                
+                                                <td><a href="#">Submit</a></td>
+                                            </tr>
+                                        </ng-template>
+                                    </p-table>
+                                </div>
+                            </div>
+                        </div>
+                    </p-fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

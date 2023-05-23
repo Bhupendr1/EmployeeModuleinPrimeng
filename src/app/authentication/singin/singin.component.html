@@ -1,0 +1,29 @@
+<section style="background-image: url(assets/images/login.jpg);">
+    <mat-card class="mat-card p-2">
+      <mat-card-content class="shadow-3 bg-white">
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+          <p class="text-center text-primary font-bold">Employee Managment Information System</p>
+          <div class="grid grid-nogutter justify-content-center">
+            <!-- <div class="field col-12 ">
+              <span class="p-float-label">
+                  <input type="text" pInputText autoWidth="false" [style]="{'width': '100%'}">
+                  <label for="float-input">Name</label>
+               </span>
+          </div> -->
+          <div class="field col-12">
+            <span class="p-float-label">
+              <p-dropdown [options]="cities"  formControlName="status" optionValue="id" optionLabel="name" autoWidth="false"
+              [style]="{'width': '100%'}"></p-dropdown>
+                <label for="float-input"> </label>
+            </span>
+        </div>
+      </div>
+        <div class="grid grid-nogutter justify-content-center mt-3">
+            <div class="col-12">
+                <button mat-raised-button color="primary" type="submit"  class="w-full">Login</button>
+            </div>
+        </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </section>

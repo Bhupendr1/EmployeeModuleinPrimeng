@@ -1,0 +1,160 @@
+/* *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+} */
+body{
+  background-color: #fafafa;
+  margin:0;
+  padding:0;
+    box-sizing: border-box;
+}
+/* fieldset */
+.p-fieldset-legend-text {
+  line-height: 1;
+  color: #0251b1;
+}
+.p-fieldset .p-fieldset-legend {
+  border: 1px solid #e0e0e0;
+}
+/* .p-breadcrumb */
+.p-breadcrumb ul li:last-child .p-menuitem-text {
+	color: rgba(0, 90, 224, 0.925);
+  cursor: pointer;
+}
+/* mat button */
+.mat-mdc-raised-button.mat-unthemed {
+  --mdc-protected-button-label-text-color: rgb(255, 255, 255);
+  --mdc-protected-button-container-color: #040485;
+  border-radius: 5px;
+  font-size: medium;
+}
+/* data table */
+.p-datatable-table{
+  border: 1px solid var(--cyan-50);
+  border-radius: 4px !important;
+}
+.p-datatable .p-datatable-thead > tr > th {
+  text-align: left;
+  padding: 0.75rem 0.75rem;
+  border: 1px solid #e4e4e4;
+  border-width: 0 0 1px 0;
+  font-weight: 500;
+  color:#fff;
+  background:var(--blue-800);
+  transition: none;
+}
+.colored thead.p-datatable-thead{
+  color: #fff !important;
+  background-color: #02387b !important;
+}
+/* .p-paginator */
+.p-paginator{
+  background: #f9f9f9 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: end !important;
+  flex-wrap: wrap !important;
+  padding: 0 !important;
+}
+.p-paginator-bottom .p-paginator .p-component .ng-star-inserted {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  border: solid #e4e4e4;
+  border-width: 0;
+  border-radius: 4px;
+}
+/* button */
+.p-inputgroup .p-button {
+  color: #ffffff !important;
+  background:var(--blue-300) !important;
+}
+.last-edited-step-1 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+
+.last-edited-step-2 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+.last-edited-step-2 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(4),
+
+.last-edited-step-3 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+.last-edited-step-3 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(4),
+.last-edited-step-3 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(6),
+
+.last-edited-step-4 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+.last-edited-step-4 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(4),
+.last-edited-step-4 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(6),
+.last-edited-step-4 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(8),
+
+.last-edited-step-5 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+.last-edited-step-5 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(4),
+.last-edited-step-5 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(6),
+.last-edited-step-5 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(8),
+.last-edited-step-5 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(10),
+
+.last-edited-step-6 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+.last-edited-step-6 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(4),
+.last-edited-step-6 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(6),
+.last-edited-step-6 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(8),
+.last-edited-step-6 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(10),
+.last-edited-step-6 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(12),
+
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(2),
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(4),
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(6),
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(8),
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(10),
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(12),
+.last-edited-step-7 .mat-horizontal-stepper-header + .mat-stepper-horizontal-line:nth-child(14)
+
+ {
+    /* margin-top: .2rem; */
+    border-top: 3px solid #198754!important;
+
+}
+.mat-step-header .mat-step-icon-selected {
+  background-color: #231e60; 
+  outline-width: thick !important;
+	outline-color: #231e60 !important;
+	outline-style: dotted !important;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  color: transparent !important;
+}
+.mat-step-header .mat-step-icon-selected:hover {
+  background-color: #231e607e;  
+  outline-width: thick !important; 
+	outline-color: #231e60 !important;
+	outline-style: solid !important;
+
+}
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+	/* background: #198754 !important; */
+	color: #fff;
+	outline-width: thick;
+	outline-color: #198754;
+	outline-style: dotted;
+}
+
+.mat-step-header .mat-step-icon-active {
+  background-color: #198754 !important;
+}
+.mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #198754 !important;
+  color: #fff;
+}
+.mat-step-header .mat-step-icon-state-done + .mat-step-label, .mat-step-header .mat-step-icon-state-edit + .mat-step-label {
+  color: #35a255 !important;
+}
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}

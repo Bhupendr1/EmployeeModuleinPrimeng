@@ -1,0 +1,68 @@
+<article>
+    <section>
+        <div class="content-wrapper box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="">
+                                    <div class="single-file" *ngFor="let file of Single_files; let i = index">
+                                        <div class="file-icon mx-2">
+                                            <div class="delete" class="position-relative">
+                                                <h4>{{file?.name.toString().slice(-3)}}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h4 class="name">
+                                                {{ file?.name }}
+                                            </h4>
+                                            <p class="size">
+                                                {{ formatBytes(file?.size,file?.name) }} / 200 KB
+                                            </p>
+                                            <app-progress [progress]="file?.progress"></app-progress>
+                                        </div>
+                                        <label>
+                                            <button mat-stroked-button color="primary"
+                                                class="Browserbtn">Preview</button>
+                                        </label>
+                                        <span>
+                                            <div class="delete" (click)="Single_Delete(i)">
+                                                <img src="./assets/images/delete.svg">
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <div class="table-responsive">
+                                    <table class="table text-nowrap">
+                                      
+                                        <tbody>
+                                            <tr *ngFor="let field of doc_list;let i =index">
+
+                                                <td *ngIf="id!==i">document</td>
+                                                <td *ngIf="id!==i"> <div class="d-flex justify-content-center rounded-5">
+                                                    <div class="uploadfile">
+                                                        <input type="file" #fileDropRef id="fileDropRef" multiple
+                                                            (change)="Singleon($event,i+1)" />
+                                                        <label for="fileDropRef">
+                                                            <button mat-stroked-button color="primary"
+                                                                class="Browserbtn">Browse</button>
+                                                        </label>
+                                                    </div>
+                                                </div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

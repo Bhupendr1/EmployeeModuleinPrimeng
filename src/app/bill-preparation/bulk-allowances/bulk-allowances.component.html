@@ -1,0 +1,152 @@
+<section>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="text-center font-bold  text-4xl sm:ml-1 mb-1 sm:mt-0 mt-1">
+                <p-breadcrumb [model]="breadcum"></p-breadcrumb>
+            </div>
+            <div class="feature-boxes grid-nogutter grid ">
+
+
+
+                <div class="col-12 ">
+                    <form class=" ">
+                        <p-fieldset legend="Bulk Allowance">
+                            <div class="grid grid-nogutter">
+                                <div class="col-12 ">
+                                    <div class="formgrid grid mt-1 flex  flex-wrap shadow-1 border-round-sm pt-3">
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+
+                                                <p-dropdown [options]="Genderdata" placeholder="Bill Name"
+                                                    optionLabel="GEN_NAME_EN" [showClear]="true" [filter]="true"
+                                                    filterBy="name" [showClear]="true" autoWidth="false"
+                                                    [style]="{'width': '100%'}" class="p-inputtext-md">
+                                                </p-dropdown>
+                                                <label for="float-input">Bill Name</label>
+                                            </span>
+                                        </div>
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <p-dropdown [options]="Genderdata" placeholder="Bill Sub Type"
+                                                    optionLabel="GEN_NAME_EN" [showClear]="true" [filter]="true"
+                                                    filterBy="name" [showClear]="true" autoWidth="false"
+                                                    [style]="{'width': '100%'}" class="p-inputtext-md">
+                                                </p-dropdown>
+                                                <label for="float-input">Allowance</label>
+                                            </span>
+                                        </div>
+
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <p-dropdown [options]="Genderdata" placeholder="Type"
+                                                    optionLabel="GEN_NAME_EN" [showClear]="true" [filter]="true"
+                                                    filterBy="name" [showClear]="true" autoWidth="false"
+                                                    [style]="{'width': '100%'}" class="p-inputtext-md">
+                                                </p-dropdown>
+                                                <label for="float-input">Select Type</label>
+                                            </span>
+
+                                        </div>
+                                        <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                            <span class="p-float-label">
+                                                <input id="float-input" type="text" pInputText autoWidth="false"
+                                                    [style]="{'width': '100%'}">
+                                                <label for="float-input">Amount</label>
+                                            </span>
+
+                                        </div>
+                                        <div class="field col-12">
+                                            <p-divider align="center">
+                                                <p-button label="Employee-List" icon="pi pi-list"
+                                                    styleClass="p-button-outlined">
+                                                </p-button>
+                                            </p-divider>
+                                        </div>
+
+                                        <div class="grid grid-nogutter d-flex bg-blue-50 shadow-1 w-full pt-3 mb-2">
+                                            <div class="field col-6 col-offset-3">
+                                                <span class="p-float-label">
+                                                    <p-multiSelect [options]="cities"
+                                                        defaultLabel="Select Employee-List" optionLabel="name"
+                                                        [itemSize]="34" class="multiselect-custom-virtual"
+                                                        display="chip" aria-disabled="true" autoWidth="false"
+                                                        [style]="{'width': '100%'}">
+                                                    </p-multiSelect>
+                                                    <label for="float-input">Employee List</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="field col-12">
+                                            <div class="flex flex-wrap justify-content-center gap-3">
+                                                <button type="button" mat-raised-button>
+                                                    <mat-icon matSuffix>done</mat-icon>Submit
+                                                </button>
+                                                <button type="button" mat-raised-button color="warn"><mat-icon
+                                                        matSuffix>refresh</mat-icon>Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <section>
+                                        <div class="grid mt-5 shadow-1 content-section implementation">
+                                            <div class="col-12">
+                                                <p-table #dt1 [value]="customers" [scrollable]="true" [lazy]="true"
+                                                    styleClass="p-datatable-customers"
+                                                    (onLazyLoad)="loadCustomers($event)" selectionMode="single"
+                                                    [paginator]="true" [rowsPerPageOptions]="[10,25,50]" [rows]="5"
+                                                    [totalRecords]="totalRecords" [loading]="loading"
+                                                    [tableStyle]="{'min-width': '10rem'}" dataKey="id"
+                                                    stateStorage="local" stateKey="statedemo-local">
+                                                    <ng-template pTemplate="caption">
+                                                        <!-- <div class="p-inputgroup"> -->
+                                                        <!-- <span class="p-inputgroup-addon"><i
+                                                                class="pi pi-search"></i></span>
+                                                        <span class="p-float-label">
+                                                            <input type="text" pInputText>
+                                                            <label for="float-input">Search</label>
+                                                        </span> -->
+                                                        <span class="p-float-label p-input-icon-right">
+                                                            <i class="pi pi-search "></i>
+                                                            <input type="text" pInputText placeholder="Search">
+                                                            <label for="float-input">Search</label>
+                                                        </span>
+                                                        <!-- </div> -->
+                                                    </ng-template>
+                                                    <ng-template pTemplate="header">
+                                                        <tr>
+                                                            <th pSortableColumn="code" style="width:20%">Name
+                                                                <p-sortIcon field="code"></p-sortIcon></th>
+                                                            <th pSortableColumn="name" style="width:20%">Country
+                                                                <p-sortIcon field="name"></p-sortIcon></th>
+                                                            <th pSortableColumn="category" style="width:20%">Company
+                                                                <p-sortIcon field="category"></p-sortIcon></th>
+                                                            <th pSortableColumn="quantity" style="width:20%">
+                                                                Representative <p-sortIcon
+                                                                    field="quantity"></p-sortIcon></th>
+                                                        </tr>
+                                                    </ng-template>
+                                                    <ng-template pTemplate="body" let-customer>
+                                                        <tr>
+                                                            <td>{{customer.name}}</td>
+                                                            <td>{{customer.country.name}}</td>
+                                                            <td>{{customer.company}}</td>
+                                                            <td>{{customer.representative.name}}</td>
+                                                        </tr>
+                                                    </ng-template>
+                                                </p-table>
+                                            </div>
+
+
+                                        </div>
+                                    </section>
+
+
+                                </div>
+                            </div>
+                        </p-fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

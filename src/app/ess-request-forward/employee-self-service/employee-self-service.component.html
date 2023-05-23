@@ -1,0 +1,323 @@
+<div class="text-center font-bold  text-4xl sm:ml-1 mb-1 sm:mt-0 mt-1"><p-breadcrumb
+    [model]="abc"></p-breadcrumb></div>
+    <mat-stepper labelPosition="bottom" #stepper linear class="{{ 'last-edited-step-' + stepper.selectedIndex }}"  [orientation]="(stepperOrientation | async)!">
+        <ng-template matStepperIcon="edit">
+            <mat-icon>check</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="done"></ng-template>
+        <ng-template matStepperIcon="home">
+            <mat-icon>account_circle</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="family">
+            <mat-icon>group</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="settings">
+            <mat-icon>account_balance</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="file">
+            <mat-icon>calculate</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="sunny">
+            <mat-icon>account_balance</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="last">
+            <mat-icon>inventory</mat-icon>
+        </ng-template>
+    
+    <mat-step  [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Employee Self Service</ng-template>
+                    
+                       <div class="feature-boxes grid-nogutter grid bg-white">
+                            <div class="col-12 ">
+                                <form [formGroup]="EmpSelfDetailForm" (ngSubmit)="onSubmit()">
+                                    <p-fieldset legend="Employee's Detail Verification">
+                
+                                        <div class="grid grid-nogutter">
+                
+                                            <div class="col-12">
+                                                <div class="formgrid grid flex">
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                                                            <label class="text-lg font-medium text-800 capitalize">Name : </label>
+                                                            <label class="text-base font-normal text-600 capitalize">{{Name}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Father's Name
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{fatherName}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Mother's Name
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{motherName}}</label>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize"> Gender :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{Gender_Data}}</label>
+                                                        </div>
+                                                    </div>
+                
+                
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                                                            <label class="text-lg font-medium text-800 capitalize">Social Category
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{Social_Category}}</label>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Mobile Number
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{mobileNumber}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize"> Marital Status
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{Marital_Status}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Spouse Name :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{spouseName}}</label>
+                                                        </div>
+                                                    </div>
+                
+                
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Type of Disability
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{Disability_Type}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Persentage Of
+                                                                Disability :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{percentageDisability}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Height :</label>
+                                                            <label class="text-base font-normal text-600 capitalize">{{height}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize"> Blood Group
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{Blood_Group}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize">Identification Mark
+                                                                :</label>
+                                                            <label
+                                                                class="text-base font-normal text-600 capitalize">{{identificationMark}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize"> PAN No :</label>
+                                                            <label class="text-base font-normal text-600 capitalize">{{panNo}}</label>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="field col-12 sm:col-6 md:col-4 xl:col-3">
+                                                        <div
+                                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                
+                                                            <label class="text-lg font-medium text-800 capitalize"> Email ID :</label>
+                                                            <label class="text-base font-normal text-600 capitalize">{{emailID}}</label>
+                                                        </div>
+                                                    </div>
+                
+                
+                                                    <div
+                                                        class="card flex col-12 shadow-1 justify-content-center border-round align-items-center pt-3 mb-2">
+                                                        <div class="field col-12 sm:col-6">
+                                                            <span class="p-float-label p-input-icon-right w-full">
+                                                                <input type="text" pInputText placeholder="Remark" autoWidth="false"
+                                                                    formControlName="Remark" [style]="{'width': '100%'}">
+                                                                <label for="float-label">Remark <span
+                                                                        class="text-red-500">*</span></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                
+                
+                
+                                                    <div class="field col-12 mt-3">
+                                                        <div class="flex flex-wrap justify-content-center gap-5" *ngIf="isShowApprove">
+                                                            <button type="button" mat-raised-button style="background-color:#039487">
+                                                                <mat-icon matSuffix>beenhere</mat-icon>Approve
+                                                            </button>
+                                                            <button type="button" mat-raised-button class="bg-red-500"> <mat-icon
+                                                                    matSuffix><span class="material-symbols-outlined">
+                                                                        close
+                                                                    </span></mat-icon>Reject
+                                                            </button>
+                                                        </div>
+                                                        <div class="flex flex-wrap justify-content-center gap-5" *ngIf="isShowForward">
+                                                            <button type="button" mat-raised-button class="bg-red-500"> <mat-icon
+                                                                matSuffix><span class="material-symbols-outlined">
+                                                                    arrow_back_ios
+                                                                </span></mat-icon>Return
+                                                        </button>
+                                                            <button type="button" mat-raised-button style="background-color:#198754;">Forward
+                                                                <span class="maticonssize"><mat-icon>arrow_forward_ios</mat-icon></span>
+                                                            </button>
+                                                        </div>
+                
+                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </p-fieldset>
+                                </form>
+                
+                            </div>
+                        </div>
+                        <div class="flex justify-content-center my-2">
+                            <button mat-mini-fab color="primary" matStepperNext>
+                             <mat-icon>
+                               chevron_right
+                               </mat-icon>
+                           </button>
+                         
+                     </div>
+     </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup"   [optional]="isOptional" errorColor="warn" errorIcon="warning">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Bank Account Change Request</ng-template>
+        <app-ess-bank-account-change-request></app-ess-bank-account-change-request>
+        
+        <div class="flex justify-content-center my-5 gap-4">
+            <button mat-mini-fab color="primary" matStepperPrevious>
+             <mat-icon>
+               chevron_left
+               </mat-icon>
+               </button>
+            <button mat-mini-fab color="primary" matStepperNext>
+             <mat-icon>
+               chevron_right
+               </mat-icon>
+           </button>
+         
+     </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" [optional]="isOptional">
+        <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Employee date type</ng-template>
+        <app-ess-emp-date-type></app-ess-emp-date-type>
+        <div class="flex justify-content-center my-5 gap-4">
+            <button mat-mini-fab color="primary" matStepperPrevious>
+             <mat-icon>
+               chevron_left
+               </mat-icon>
+               </button>
+            <button mat-mini-fab color="primary" matStepperNext>
+             <mat-icon>
+               chevron_right
+               </mat-icon>
+           </button>
+         
+     </div>
+        </form>
+  
+      </mat-step>
+      <mat-step [stepControl]="fourthFormGroup"  [optional]="isOptional" errorColor="warn" errorIcon="warning">
+        <form [formGroup]="fourthFormGroup">
+          <ng-template matStepLabel>Employee Nominee Update
+          </ng-template>
+          <app-ess-nominee-update></app-ess-nominee-update> 
+          <div class="flex justify-content-center my-5 gap-4">
+            <button mat-mini-fab color="primary" matStepperPrevious>
+             <mat-icon>
+               chevron_left
+               </mat-icon>
+               </button>
+            <button mat-mini-fab color="primary" matStepperNext>
+             <mat-icon>
+               chevron_right
+               </mat-icon>
+           </button>
+         
+     </div>    
+        </form>
+      </mat-step>
+
+
+
+
+    <mat-step>
+        <ng-template matStepLabel>Number Update</ng-template>
+        <app-ess-other-number-update></app-ess-other-number-update>
+        <div class="float-end">         
+            <button mat-button matStepperPrevious class="btn btn-secondary ms-2" color="secondary">Previous</button>
+            <button mat-button  (click)="stepper.reset()" class="btn btn-primary  ms-2">Reset</button>
+    </div>
+       
+    </mat-step>
+</mat-stepper>
+
+
+
+
+
+
+

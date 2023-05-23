@@ -1,0 +1,118 @@
+
+.maticonssize{
+    scale: 0.7;
+    display: flex;
+    align-items: center;
+}
+::ng-deep .mdc-button .mdc-button__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    
+  }
+  :host ::ng-deep .last-edited-step-1 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-1 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-2 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-2 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-2 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::after,
+  :host ::ng-deep .last-edited-step-2 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::before,
+  :host ::ng-deep .last-edited-step-3 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-3 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-3 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::after,
+  :host ::ng-deep .last-edited-step-3 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::before,
+  :host ::ng-deep .last-edited-step-3 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::after,
+  :host ::ng-deep .last-edited-step-3 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::before,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::after,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::before,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::after,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::before,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::after,
+  :host ::ng-deep .last-edited-step-4 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::before,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::after,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::before,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::after,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::before,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::after,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::before,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::after,
+  :host ::ng-deep .last-edited-step-5 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(11)::before,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::after,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::before,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::after,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::before,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::after,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::before,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::after,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(11)::before, 
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(11)::after, 
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(13)::before,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(1)::after,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::before,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(3)::after,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::before,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(5)::after,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::before,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(7)::after,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::before,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(9)::after,
+  :host ::ng-deep .last-edited-step-6 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(11)::before, 
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(11)::after, 
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(13)::before,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(13)::after,
+  :host ::ng-deep .last-edited-step-7 .mat-horizontal-stepper-header-container .mat-step-header:nth-child(15)::before 
+  {
+
+    border-top: 3px solid #198754!important;
+  }
+
+  ::ng-deep .mat-horizontal-stepper-header-container {
+    margin-left:.2rem !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px  !important;
+    border-radius: 4px !important;
+    background-color: #ffffff !important;
+    height: 5rem !important;
+}
+::ng-deep .mat-horizontal-content-container {
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 1rem 0;
+}
+
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-icon {
+margin-right: 0;
+margin-left: 0;
+}
+.mat-stepper-horizontal {
+margin-top: 8px;
+background:none !important;
+}
+
+:host::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
+	font-weight: 500 !important;
+	color: #535353  !important;
+  margin-top: .5rem !important; 
+}
+/* .mat-expansion-panel {
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+} */
+.card_accordion {
+border-radius: 10px !important;
+border: 2px solid rgba(218, 218, 218, 0.1);
+-webkit-background-clip: padding-box; /* for Safari */
+background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
+padding: 0 !important;
+text-align: center;
+width: 100%;
+font-weight: 500 !important;
+color: #636363 !important;
+font-family: 'Lato' !important;
+}

@@ -1,0 +1,109 @@
+<div class="content-wrapper">
+    <div class="content">
+        <!-- <div class="text-center font-bold  text-4xl sm:ml-1 mb-1 sm:mt-0 mt-1"><p-breadcrumb
+                [model]="abc"></p-breadcrumb></div> -->
+        <div class="feature-boxes grid-nogutter grid ">
+            <div class="col-12 ">
+                <form class=" ">
+                    <p-fieldset legend="Bank Account Change Request">
+
+                        <div class="grid grid-nogutter">
+                            <div class="col-12 ">
+
+                                <p-divider align="center">
+                                    <div class="inline-flex align-items-center">
+                                        <p-button label="Current Details" styleClass="p-button-outlined"></p-button>
+                                    </div>
+                                </p-divider>
+                                <div class="formgrid grid ">
+
+
+
+                                    <div class="field col-12 sm:col-6">
+                                        <div
+                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                                            <label class="text-lg font-medium text-800 capitalize">Bank Name:</label>
+                                            <label
+                                                class="text-base font-normal text-600 capitalize">{{Bank_name}}</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="field col-12 sm:col-6">
+                                        <div
+                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                                            <label class="text-lg font-medium text-800 capitalize">Branch Name:</label>
+                                            <label
+                                                class="text-base font-normal text-600 capitalize">{{Branch_name}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p-divider align="center">
+                                            <p-button label="New Details" styleClass="p-button-outlined"></p-button>
+                                        </p-divider>
+                                    </div>
+
+
+                                    <div class="field col-12 sm:col-6">
+                                        <div
+                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                                            <label class="text-lg font-medium text-800 capitalize">IFSC Code:</label>
+                                            <label
+                                                class="text-base font-normal text-600 capitalize">{{n_ifsc_code}}</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="field col-12 sm:col-6">
+                                        <div
+                                            class="bg-blue-50 py-3 pl-2 w-full border-round  flex align-items-center flex align-items-center">
+                                            <label class="text-lg font-medium text-800 capitalize">Account
+                                                Number:</label>
+                                            <label
+                                                class="text-base font-normal text-600 capitalize">{{n_Account_No}}</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="card flex col-12 shadow-1 justify-content-center border-round align-items-center pt-3 mb-2">
+                                        <div class="field col-12 sm:col-6">
+                                            <span class="p-float-label p-input-icon-right w-full">
+                                                <input type="text" pInputText placeholder="Remark" autoWidth="false"
+                                                    formControlName="Remark" [style]="{'width': '100%'}">
+                                                <label for="float-label">Remark <span
+                                                        class="text-red-500">*</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                        <div class="field col-12 mt-2" *ngIf="isShowApprove">
+                                            <div class="flex flex-wrap justify-content-center gap-5">
+                                                <button type="button" mat-raised-button
+                                                    style="background-color:#039487"> <mat-icon
+                                                        matSuffix>beenhere</mat-icon>Approve</button>
+                                                <button type="button" mat-raised-button class="bg-red-500"> <mat-icon
+                                                        matSuffix><span class="material-symbols-outlined">
+                                                            close
+                                                        </span></mat-icon>Reject
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="field col-12 mt-2" *ngIf="isShowForward">
+                                            <div class="flex flex-wrap justify-content-center gap-5">
+                                                <button type="button" mat-raised-button
+                                                    style="background-color:#039487"> <mat-icon
+                                                        matSuffix>arrow_back_ios</mat-icon>Return</button>
+                                                <button type="button" mat-raised-button class="bg-red-500"> <mat-icon
+                                                        matSuffix><span class="material-symbols-outlined">
+                                                            arrow_forward_ios
+                                                        </span></mat-icon>Forward
+                                                </button>
+                                            </div>
+                                        </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </p-fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,297 @@
+/* top header */
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+.w3l-top-header {
+	background: #231e60;
+}
+.left-content{
+  display: flex;
+  justify-content:start;
+  align-items: center;
+}
+.right-content{
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  gap: 10px;
+}
+.chevron-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+
+.chevron-button.rotated {
+  transform: rotate(180deg);
+}
+span i{
+  color: aliceblue;
+}
+form span i{
+  color: #000;
+}
+
+.wall{
+border-left: .5px solid #fff;
+height: 40px;
+}
+.p-inputtext {
+	font-size: 1rem;
+	color: #fff;
+	background: #ffffff;
+	padding: 0.2rem 0.25rem;
+  border-radius: 0;
+}
+:host::ng-deep.p-dropdown {
+  background: none;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-radius: 0;
+}
+:host::ng-deep .p-dropdown-label {
+  color: #fff;
+}
+:host::ng-deep .p-dropdown .p-dropdown-trigger {
+  color: #fff;
+}
+
+
+/* bottom header */
+.hero {
+background-image: linear-gradient(#2471bc, #3584cf);
+z-index: 10000000000;  
+}
+ul{
+  list-style-type: none
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+@media screen and (max-height: 450px) {
+
+}
+
+span.button-croce {
+float: right;
+}
+
+
+
+
+a.closebtn {
+  margin-top: 20px;
+}
+.header .flag img{
+  height:95px;
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+
+  .header .flag img{
+    height:68px;
+  }
+ }
+
+ .breadcrumb.card {
+     padding: 0.75rem 1rem;
+     border-radius: 0.25rem;
+     font-weight: 620;
+     z-index: 0;
+   }
+   .sticky {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   -webkit-box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;;
+ -moz-box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;;
+ box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;;
+ }
+ 
+ 
+
+   .w3l-top-header .dropdown-content {
+     display: none;
+     position: absolute;
+     left: -25px;
+     background-color: #f9f9f9;
+     min-width: auto;
+     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+     padding: 5px 16px 0;
+     z-index: 1;
+     color: #000;
+ }
+
+
+   /* @font-face {
+     font-family: 'FontAwesome';
+     src: url("../../../../assets/maine-css/fonts/fontawesome-webfont.eot?v=4.7.0");
+     src: url("../../../../assets/maine-css/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../../../assets/maine-css/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../../../assets/maine-css/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../../../../assets/maine-css/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../../../assets/maine-css/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+     font-weight: normal;
+     font-style: normal;
+   }
+   .fa {
+     display: inline-block;
+     font: normal normal normal 14px/1 FontAwesome;
+     font-size: inherit;
+     text-rendering: auto;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-size: 18px;
+   }
+   .fa-phone:before {
+     content: "";
+   }
+   .fa-wheelchair:before {
+     content: "";
+   }
+   .fa-twitter:before {
+     content: "";
+   }
+   .fa-facebook-f:before,
+   .fa-facebook:before {
+     content: "";
+   }
+   .fa-youtube:before {
+     content: "";
+   }
+   .fa-instagram:before {
+     content: "";
+   } */
+   /*--------------------------------------------------------------
+   # Header
+   --------------------------------------------------------------*/
+   #header {
+     height: 100px;
+     transition: all 0.5s;
+     z-index: 997;
+     transition: all 0.5s;
+     /* background: rgba(1, 4, 136, 0.9); */
+   }
+   
+   /*--------------------------------------------------------------
+     # Navigation Menu
+     --------------------------------------------------------------*/
+   /**
+     * Desktop Navigation 
+     */
+     .w3l-top-header .top-headers li a, .w3l-top-header .top-headers li {
+       color: #fff;
+       font-size: 13px;
+       font-weight: 500;
+       text-decoration: none;
+   }
+  .top-headers li {
+       float: left;
+       display: inline-block;
+       margin: 0;
+       border-right: 1px solid #4964a4;
+       padding: 0 10px;
+       height: 40px;
+       line-height: 39px;
+   }
+   .top-headers li .search-popup
+   {
+     line-height: 22px;
+     width: 190px;
+   }
+     .w3l-top-header {
+       background: #231e60;
+   }
+   .hero {
+     width: 100%;
+     background-image: linear-gradient(#2471bc, #3584cf);
+     z-index: 10000000000;  
+   }
+     .sidenav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+   }
+      
+   span.button-croce {
+     color: #ffff;
+    
+   }
+   
+   @media only screen and (max-width: 2400px) and (min-width: 768px) {
+   
+     span.button-croce {
+       display: none;
+     }
+   
+   }
+   
+ 
+   
+   a.closebtn {
+     margin-top: 20px;
+   }
+   .header .flag img{
+     height:95px;
+   }
+   @media (min-width: 768px) and (max-width: 992px) { 
+      .header .flag img{
+       height:68px;
+     }
+    }
+   
+    ::ng-deep.mat-mdc-menu-panel.mat-mdc-menu-panel {
+      background-color: #Ffffff !important;
+  }
+
+
+small i{
+  scale: .7;
+  color: #0064ff;
+}
+.avatarclass {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	justify-content:space-between;
+	align-items: center;
+	padding: .8rem;
+}
+
+.profileclass{
+  background-color: #f0f0f0;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
+  height: 25vh;
+} 
+.profileclass li{
+display: flex;
+flex-direction: column;
+}
+::ng-deep.mat-mdc-menu-item {
+   cursor: none;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: inherit;
+  background: none;
+}
+::ng-deep .mat-mdc-menu-content {
+  margin: 0 !important;
+  padding:0 !important;
+  list-style-type: none !important;
+}
+.avatarclass li a{
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+  transition: .2s ease-in-out
+}
+.avatarclass li:hover{
+  text-decoration: underline;
+
+}

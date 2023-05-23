@@ -1,0 +1,142 @@
+<section class="w3l-top-header text-0 no-underline">
+    <div class="grid grid-nogutter">
+        <div class="col-8 md:col-3 flex">
+            <div class="left-content">
+                <a href="#" class="text-0 no-underline">Help Desk &nbsp; <i class="pi pi-phone"
+                        aria-hidden="true"></i>&nbsp;
+                    01412924501
+                </a>
+            </div>
+        </div>
+        <div class="col-4 md:col-9">
+            <div class="right-content">
+                <span><a href="#" class="text-0 no-underline hidden md:block">Skip To Content </a></span>
+                <span class="dropmenu">
+                    <p-dropdown [options]="cities" [(ngModel)]="selectedCityCode" optionLabel="name"
+                        optionValue="code"></p-dropdown>
+                </span>
+
+                <p-dropdown [options]="citi" [(ngModel)]="selectedCityCode1" optionLabel="code" class="text-0">
+                    <span><i class="pi-th-large" aria-hidden="true"></i></span>
+                </p-dropdown>
+
+
+
+                <span class="hidden lg:block">
+                    <a href="#twitter"><i class="pi pi-twitter"></i></a>
+                </span>
+                <span class="wall hidden lg:block"></span>
+                <span class="hidden  lg:block">
+                    <a href="#facebook"><i class="pi pi-facebook"></i></a>
+                </span>
+                <span class="wall hidden lg:block"></span>
+                <span class="hidden lg:block">
+                    <a href="#youtube"><i class="pi pi-youtube"></i></a>
+                </span>
+                <span class="wall hidden lg:block"></span>
+                <span class="hidden lg:block">
+                    <a href="#instagram"><i class="pi pi-instagram"></i></a>
+                </span>
+                <span class="wall hidden lg:block"></span>
+
+                <div class="hidden lg:block">
+                    <!-- search button -->
+                    <form action="#search" method="GET" class="search-box position-relative">
+                        <span class="p-input-icon-right">
+                            <i class="pi pi-search"></i>
+                            <input type="text" pInputText [(ngModel)]="value1" placeholder="Search">
+                        </span>
+                    </form>
+                </div>
+                <span class="wall hidden lg:block"></span>
+                <!-- @author animesh - @change Description - title changed to logout from login  -->
+                <span class="hidden md:block"><button mat-raised-button color="primary"
+                        class="text-0 no-underline">Logout</button></span>
+                <span class="wall hidden md:block"></span>
+                <span class="hidden md:block"><a class="text-0 no-underline" routerLink="/http://ifmstest.rajasthan.gov.in/#/rajasthanSSO/ifms-apps-user/applicant/dashboard
+                            ">Back to SSO</a></span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="hero header w-full m-0 p-0" id="myHeader">
+    <div class="flex align-items-center">
+        <div class="col-2 sm:col-2 block sm:hidden">
+            <button (click)="openMenu()" mat-icon-button class="example-icon"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon [ngStyle]="{'color':'white'}">menu</mat-icon>
+            </button>
+        </div>
+        <app-toggle-menu></app-toggle-menu>
+        <div class="col-8 sm:col-8 md:col-4">
+            <img src="assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="hidden md:block md:col-4 p-0 m-0">
+            <div class="flag text-center">
+                <img class="img-fluid" src="assets/images/flag.svg">
+            </div>
+        </div>
+        <div class="col-2 sm:col-4 md:col-4 lg:col-4">
+            <mat-menu id="mySidenav" #menu="matMenu">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <mat-card-subtitle class="text-center">Employee Profile</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="profileclass">
+                            <p-avatar image="assets/images/avatar.svg" shape="circle" value="4" severity="danger"
+                                size="xlarge"></p-avatar>
+                            <div>Sharul Saxena</div>
+                            <small style="color: gray;">Admin Deptartment</small>
+                            <small style="color: #0064ff;"><span><i class="pi pi-user"></i></span> Senior System Analyst</small>
+                            <small>Indra Gandhi Nahar Department</small>
+                        </div>
+                      <div class="avatarclass">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Manual</a></li>
+                        <li><a href="#"> FAQ</a></li>
+                        <li><a href="#"> Helpdesk </a></li>
+                    </div>
+                    </mat-card-content>
+                    <mat-card-footer>
+
+                        <mat-divider></mat-divider>
+                        
+                <small class=" flex justify-content-center  text-center">9/21/2022 | 12:13:29 PM</small>
+                    </mat-card-footer>
+                  </mat-card>
+            </mat-menu>
+            <div class="hidden md:block">
+                <ul class="flex  justify-content-evenly">
+                    <li><a class="nav-link scrollto active" href="home.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="manual.html">Manual</a></li>
+                    <li><a class="nav-link scrollto" href="faq.html"> FAQ</a></li>
+                    <li><a class="nav-link scrollto" href="helpdesk.html"> Helpdesk </a></li>
+                </ul>
+            </div>
+
+
+            <span class="button-croce" [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon>
+            </span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "285px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+<script>
+    function openMenu() {
+    }
+    function closeMenu() {
+        document.getElementById("Sidenav").style.width = "0";
+    }
+</script>

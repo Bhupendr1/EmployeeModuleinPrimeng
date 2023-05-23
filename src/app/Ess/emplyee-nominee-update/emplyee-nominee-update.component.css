@@ -1,0 +1,9 @@
+.btnclass{
+  height: 2.7rem;
+  width: 100%;
+}
+@media screen and (max-width: 576px){
+  .btnclass{
+    width: 100%;
+  }
+}

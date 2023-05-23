@@ -1,0 +1,78 @@
+
+<div class="content-wrapper">
+    <div class="row">
+
+        <form [formGroup]="Bank_details" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <h3>Bank Details</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>Treasury Name</span>
+                            <label>Jaipur (Industries)</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>Sub Treasury Name</span>
+                            <label>Jaipur (Industries)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>Bank Name</span>
+                            <label>{{Banklist.accountNumber}}</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>Branch Name</span>
+                            <label>{{Banklist.branchName}}</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>Account Holder Name </span>
+                            <label>{{Banklist.branchName}}</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>Account Number</span>
+                            <label>{{Banklist.accountNumber}}</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>IFSC Code</span>
+                            <label>{{Banklist.branchName}}</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mt-3">
+                        <div>
+                            <span>PIN Code</span>
+                            <label>{{Banklist.branchName}}</label>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="row align-item-center">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-12">
+                            <div class="float-end">
+                                <button mat-button mat-dialog-close class="btn btn-warring  ms-2"
+                                    mat-stroked-button>Previous</button>
+                                <button class="btn btn-primary  ms-2" mat-raised-button color="primary">Save to
+                                    proceed</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table text-nowrap">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" class="mat-sort-header-content">S.No.</th>
+                        <th scope="col">Loan/Advance type</th>
+                        <th scope="col">Commencement of loan</th>
+                        <th scope="col">Duration of loan in months</th>
+                        <th scope="col">Saction amount</th>
+                        <th scope="col">Amount paid</th>
+                        <th scope="col">Balance amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let field of loanAndAdvancesDetails">
+                        <td>{{field.loanId}}</td>
+                        <td>{{field.loanType}}</td>
+                        <td>{{field.loanDate}}</td>
+                        <td>{{field.loanId}}</td>
+                        <td>{{field.sanctionAmt}}</td>
+                        <td>{{field.amountPaid}}</td>
+                        <td>{{field.netAmtDue}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
